@@ -1,0 +1,30 @@
+{{!
+
+	COVER - AUTHOR
+	- Configuration of this file is not required.
+
+}}
+
+	<section class="cover author" data-height="65">
+	    {{#author}}
+		{{#if cover}}
+            <div class="background" style="background-image:url('{{cover}}');"></div>
+        {{else}}
+            <div class="background" style="background-image:url('{{@blog.cover}}');"></div>
+        {{/if}}
+		{{> bloginfo}}
+		<section class="authortitle wrapper">
+			<div class="info">
+				<img src="{{image}}" class="profile gravatar" alt="{{name}}">
+				<div class="meta">
+					<span class="title">Author</span>
+					<h3>{{name}}</h3>
+				</div>
+			</div>
+			<p>{{bio}}</p>
+		</section>
+		{{/author}}
+		<div class="mouse">
+			<div class="scroll"></div>
+		</div>
+	</section>
